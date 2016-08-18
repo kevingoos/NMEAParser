@@ -1,6 +1,7 @@
 ﻿using System;
 using Ghostware.NMEAParser.Exceptions;
 using Ghostware.NMEAParser.NMEAMessages;
+using Ghostware.NMEAParser.NMEAMessages.Base;
 
 namespace Ghostware.NMEAParser
 {
@@ -13,7 +14,7 @@ namespace Ghostware.NMEAParser
                 throw new NotNmeaException();
             }
             var messageParts = message.Split(',');
-            var classType = NmeaConstants.GetClassType(messageParts[0].Remove(0));
+            var classType = NmeaConstants.GetClassType(messageParts[0].TrimStart('$'));
             var newInstance = (NmeaMessage)Activator.CreateInstance(classType);
             newInstance.Parse(messageParts);
             return newInstance;

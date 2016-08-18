@@ -39,7 +39,7 @@ namespace Ghostware.NMEAParser.NMEAMessages
         #region Properties
 
         /// <summary>
-        /// Fix taken at
+        /// Fix taken
         /// </summary>
         public TimeSpan FixTime { get; set; }
 
@@ -85,7 +85,7 @@ namespace Ghostware.NMEAParser.NMEAMessages
 
         #endregion
 
-        #region Message Parsing
+        #region Message parsing
 
         public override void Parse(string[] messageParts)
         {

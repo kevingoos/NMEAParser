@@ -9,7 +9,8 @@ namespace Ghostware.NMEAParser
     {
         public static Dictionary<string, Type> TypeDictionary = new Dictionary<string, Type>
         {
-            {"GPGGA", typeof(GpggaMessage)}
+            {"GPGGA", typeof(GpggaMessage)},
+            {"GPRMC", typeof(GprmcMessage)}
         };
 
         public static Type GetClassType(string typeName)

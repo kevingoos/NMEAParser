@@ -57,7 +57,7 @@ namespace Ghostware.NMEAParser.NMEAMessages
             
         }
 
-        public override void Parse()
+        public override void Parse(string[] messageParts)
         {
             throw new System.NotImplementedException();
         }

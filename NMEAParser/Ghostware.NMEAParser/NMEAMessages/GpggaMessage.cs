@@ -59,7 +59,13 @@ namespace Ghostware.NMEAParser.NMEAMessages
 
         public override void Parse(string[] messageParts)
         {
-            throw new System.NotImplementedException();
+            Latitude = Convert.ToDouble(messageParts[1]);
+            Longitude = Convert.ToDouble(messageParts[2]);
+        }
+
+        public override string ToString()
+        {
+            return $"Latitude {Latitude} - Longitude {Longitude}";
         }
     }
 }

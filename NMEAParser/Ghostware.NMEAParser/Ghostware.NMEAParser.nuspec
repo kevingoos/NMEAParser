@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Ghostware.NMEAParser</id>
+    <version>1.0.0</version>
+    <title>Ghostware.NMEAParser</title>
+    <authors>Ghosttje</authors>
+    <owners>Ghostware</owners>
+    <projectUrl>https://github.com/GhostwareDev/NMEAParser</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A library for parsing NMEA messages in C# classes.</description>
+    <releaseNotes>	
+		v0.0.1:
+		--------
+		- Initial start of the project.
+	</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+	<tags>GPSD</tags>
+  </metadata>
+</package>

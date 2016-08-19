@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Globalization;
+using Ghostware.NMEAParser.Extensions;
 using Ghostware.NMEAParser.NMEAMessages.Base;
 
 namespace Ghostware.NMEAParser.NMEAMessages
@@ -47,6 +49,11 @@ namespace Ghostware.NMEAParser.NMEAMessages
         public double Course { get; set; }
 
         /// <summary>
+        /// Date - 23rd of March 1994
+        /// </summary>
+        public DateTime UpdateDate { get; set; }
+
+        /// <summary>
         /// Magnetic Variation
         /// </summary>
         public double MagneticVariation { get; set; }
@@ -57,9 +64,25 @@ namespace Ghostware.NMEAParser.NMEAMessages
 
         public override void Parse(string[] messageParts)
         {
-
+            if (messageParts == null || messageParts.Length < 11)
+            {
+                throw new ArgumentException("Invalid GPGGA message");
+            }
+            FixTime = messageParts[1].ToTimeSpan();
+            IsActive = messageParts[2] == "A";
+            Latitude = messageParts[3].ToCoordinates(messageParts[4]);
+            Longitude = messageParts[5].ToCoordinates(messageParts[6]);
+            Speed = messageParts[7].ToDouble();
+            Course = messageParts[8].ToDouble();
+            UpdateDate = DateTime.ParseExact(messageParts[9], "ddMMyy", CultureInfo.InvariantCulture);
+            MagneticVariation = messageParts[10].ToDouble();
         }
 
         #endregion
+
+        public override string ToString()
+        {
+            return $"Latitude {Latitude} - Longitude {Longitude}";
+        }
     }
 }

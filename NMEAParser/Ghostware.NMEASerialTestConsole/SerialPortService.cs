@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO.Ports;
 using System.Threading;
-using Ghostware.GPSDLib.Exceptions;
 using Ghostware.NMEAParser;
 using Ghostware.NMEAParser.Exceptions;
 

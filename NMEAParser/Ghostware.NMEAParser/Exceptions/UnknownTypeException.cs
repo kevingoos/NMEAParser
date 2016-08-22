@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Ghostware.GPSDLib.Exceptions
+namespace Ghostware.NMEAParser.Exceptions
 {
     public class UnknownTypeException : Exception
     {

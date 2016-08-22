@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ghostware.NMEAParser", "Gho
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ghostware.NMEAParserTestConsole", "Ghostware.NMEAParserTestConsole\Ghostware.NMEAParserTestConsole.csproj", "{D3691FB0-DAC3-425D-B0C1-AA4843F92494}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ghostware.NMEASerialTestConsole", "Ghostware.NMEASerialTestConsole\Ghostware.NMEASerialTestConsole.csproj", "{00120162-9232-4740-94AE-D3C9F5600565}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D3691FB0-DAC3-425D-B0C1-AA4843F92494}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3691FB0-DAC3-425D-B0C1-AA4843F92494}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3691FB0-DAC3-425D-B0C1-AA4843F92494}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00120162-9232-4740-94AE-D3C9F5600565}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00120162-9232-4740-94AE-D3C9F5600565}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00120162-9232-4740-94AE-D3C9F5600565}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00120162-9232-4740-94AE-D3C9F5600565}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

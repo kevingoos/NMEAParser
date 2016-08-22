@@ -1,6 +1,5 @@
 ﻿using System;
 using Ghostware.NMEAParser.Exceptions;
-using Ghostware.NMEAParser.NMEAMessages;
 using Ghostware.NMEAParser.NMEAMessages.Base;
 
 namespace Ghostware.NMEAParser

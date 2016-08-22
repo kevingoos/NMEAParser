@@ -16,12 +16,15 @@ namespace Ghostware.NMEAParser.Extensions
 
         public static double ToCoordinates(this string inputString, string cardinalDirection)
         {
-            var result = inputString.ToDouble();
-            if (!double.IsNaN(result) && (cardinalDirection == "S" || cardinalDirection == "W"))
+            if (string.IsNullOrEmpty(inputString)) return 0.0d;
+            var degree = inputString.Substring(0, 2).ToDouble();
+            degree += inputString.Substring(2).ToDouble() / 60;
+
+            if (!double.IsNaN(degree) && (cardinalDirection == "S" || cardinalDirection == "W"))
             {
-                result *= -1;
+                degree *= -1;
             }
-            return result;
+            return degree;
         }
 
         public static int ToInteger(this string inputString)

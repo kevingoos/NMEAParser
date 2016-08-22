@@ -5,8 +5,8 @@ namespace Ghostware.NMEAParserTestConsole
 {
     internal class Program
     {
-        private const string GgaMessage1 = "$GPGGA,071258,5053.0303,N,00423.7356,E,1,03,2.3,,M,47.2,M,,*67";
-        private const string RmcMessage1 = "$GPRMC,071258,A,5053.0303,N,00423.7356,E,015.8,251.7,200516,000.8,W*69";
+        private const string GgaMessage1 = "$GPGGA,091317.80,5037.0968,N,00534.6232,E,9,07,1.4,73.65,M,46.60,M,05,0136*50";
+        private const string RmcMessage1 = "$GPRMC,091317.75,A,5037.0967674,N,00534.6232070,E,0.019,215.1,220816,0.0,E,D*33";
 
         static void Main(string[] args)
         {

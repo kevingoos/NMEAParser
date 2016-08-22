@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Ghostware.GPSDLib.Exceptions;
+using Ghostware.NMEAParser.Exceptions;
 using Ghostware.NMEAParser.NMEAMessages;
 
 namespace Ghostware.NMEAParser

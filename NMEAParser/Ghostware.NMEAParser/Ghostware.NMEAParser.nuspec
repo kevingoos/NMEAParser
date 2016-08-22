@@ -2,15 +2,18 @@
 <package >
   <metadata>
     <id>Ghostware.NMEAParser</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <title>Ghostware.NMEAParser</title>
     <authors>Ghosttje</authors>
     <owners>Ghostware</owners>
     <projectUrl>https://github.com/GhostwareDev/NMEAParser</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A library for parsing NMEA messages in C# classes.</description>
-    <releaseNotes>	
-		v0.0.1:
+    <releaseNotes>
+		v1.0.1:
+		--------
+		- Fixed exception namespace.
+		v1.0.0:
 		--------
 		- Initial start of the project.
 	</releaseNotes>

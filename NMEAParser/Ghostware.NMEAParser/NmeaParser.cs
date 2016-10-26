@@ -1,5 +1,4 @@
 ﻿using System;
-using Ghostware.NMEAParser.Exceptions;
 using Ghostware.NMEAParser.NMEAMessages.Base;
 
 namespace Ghostware.NMEAParser
@@ -10,7 +9,7 @@ namespace Ghostware.NMEAParser
         {
             if (!message.StartsWith("$"))
             {
-                throw new NotNmeaException();
+                return null;
             }
             var messageParts = message.Split(',');
             var classType = NmeaConstants.GetClassType(messageParts[0].TrimStart('$'));

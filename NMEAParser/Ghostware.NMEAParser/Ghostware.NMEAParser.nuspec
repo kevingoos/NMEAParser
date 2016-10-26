@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Ghostware.NMEAParser</id>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <title>Ghostware.NMEAParser</title>
     <authors>Ghosttje</authors>
     <owners>Ghostware</owners>
@@ -10,6 +10,9 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A library for parsing NMEA messages in C# classes.</description>
     <releaseNotes>
+		v1.0.3:
+		--------
+		- Now the parser gives null back instead of an exception when it not an nmea exception.
 		v1.0.2:
 		--------
 		- Fixed parsing latitude and longitude (using degrees).

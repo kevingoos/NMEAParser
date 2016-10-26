@@ -13,6 +13,12 @@ namespace Ghostware.NMEAParser
             {"GPRMC", typeof(GprmcMessage)}
         };
 
+        /// <summary>
+        /// Returns the correct class type of the message.
+        /// </summary>
+        /// <param name="typeName">The type name given.</param>
+        /// <returns>The class type.</returns>
+        /// <exception cref="UnknownTypeException">Given if the type is unkown.</exception>
         public static Type GetClassType(string typeName)
         {
             Type result;

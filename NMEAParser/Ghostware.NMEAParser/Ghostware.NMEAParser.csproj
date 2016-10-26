@@ -41,7 +41,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums\GpsFixQuality.cs" />
-    <Compile Include="Exceptions\NotNmeaException.cs" />
     <Compile Include="Exceptions\UnknownTypeException.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="NmeaConstants.cs" />

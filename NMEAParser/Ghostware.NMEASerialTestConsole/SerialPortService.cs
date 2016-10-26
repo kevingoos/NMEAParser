@@ -39,10 +39,6 @@ namespace Ghostware.NMEASerialTestConsole
             {
                 Console.WriteLine(ex.Message);
             }
-            catch (NotNmeaException nmeaEx)
-            {
-                Console.WriteLine(nmeaEx.Message);
-            }
         }
     }
 }

@@ -5,6 +5,11 @@ namespace Ghostware.NMEAParser
 {
     public class NmeaParser
     {
+        /// <summary>
+        /// Parses a string to the NmeaMessage class.
+        /// </summary>
+        /// <param name="message">The nmea string that need to be parsed.</param>
+        /// <returns>Returns an NmeaMessage class. If it cannot parse it will return null.</returns>
         public NmeaMessage Parse(string message)
         {
             if (!message.StartsWith("$"))

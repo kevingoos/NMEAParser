@@ -94,8 +94,8 @@ namespace Ghostware.NMEAParser.NMEAMessages
                 throw new ArgumentException("Invalid GPGGA message");
             }
             FixTime = messageParts[1].ToTimeSpan();
-            Latitude = messageParts[2].ToCoordinates(messageParts[3]);
-            Longitude = messageParts[4].ToCoordinates(messageParts[5]);
+            Latitude = messageParts[2].ToCoordinates(messageParts[3], CoordinateType.Latitude);
+            Longitude = messageParts[4].ToCoordinates(messageParts[5], CoordinateType.Longitude);
             FixQuality = (GpsFixQuality)Enum.Parse(typeof(GpsFixQuality), messageParts[6]);
             NumberOfSatellites = messageParts[7].ToInteger();
             Hdop = messageParts[8].ToDouble();

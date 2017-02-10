@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using System.Text.RegularExpressions;
+using Ghostware.NMEAParser.Enums;
 
 namespace Ghostware.NMEAParser.Extensions
 {
@@ -14,11 +15,14 @@ namespace Ghostware.NMEAParser.Extensions
             return regexMatch.Groups.Count == 0 ? TimeSpan.Zero : new TimeSpan(int.Parse(regexMatch.Groups[0].Value), int.Parse(regexMatch.Groups[1].Value), int.Parse(regexMatch.Groups[2].Value));
         }
 
-        public static double ToCoordinates(this string inputString, string cardinalDirection)
+        public static double ToCoordinates(this string inputString, string cardinalDirection, CoordinateType coordinateType)
         {
             if (string.IsNullOrEmpty(inputString)) return 0.0d;
-            var degree = inputString.Substring(0, 2).ToDouble();
-            degree += inputString.Substring(2).ToDouble() / 60;
+
+            var degreeCharacters = coordinateType == CoordinateType.Latitude ? 2 : 3;
+
+            var degree = inputString.Substring(0, degreeCharacters).ToDouble();
+            degree += inputString.Substring(degreeCharacters).ToDouble() / 60;
 
             if (!double.IsNaN(degree) && (cardinalDirection == "S" || cardinalDirection == "W"))
             {

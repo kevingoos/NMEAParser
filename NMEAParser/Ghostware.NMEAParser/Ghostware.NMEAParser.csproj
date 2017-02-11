@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums\CoordinateType.cs" />
     <Compile Include="Enums\GpsFixQuality.cs" />
     <Compile Include="Exceptions\UnknownTypeException.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />

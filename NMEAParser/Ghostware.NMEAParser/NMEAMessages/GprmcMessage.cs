@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using Ghostware.NMEAParser.Enums;
 using Ghostware.NMEAParser.Extensions;
 using Ghostware.NMEAParser.NMEAMessages.Base;
 
@@ -70,8 +71,8 @@ namespace Ghostware.NMEAParser.NMEAMessages
             }
             FixTime = messageParts[1].ToTimeSpan();
             IsActive = messageParts[2] == "A";
-            Latitude = messageParts[3].ToCoordinates(messageParts[4]);
-            Longitude = messageParts[5].ToCoordinates(messageParts[6]);
+            Latitude = messageParts[3].ToCoordinates(messageParts[4], CoordinateType.Latitude);
+            Longitude = messageParts[5].ToCoordinates(messageParts[6], CoordinateType.Longitude);
             Speed = messageParts[7].ToDouble();
             Course = messageParts[8].ToDouble();
             UpdateDate = DateTime.ParseExact(messageParts[9], "ddMMyy", CultureInfo.InvariantCulture);

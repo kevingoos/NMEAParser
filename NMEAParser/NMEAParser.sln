@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ghostware.NMEAParser", "Ghostware.NMEAParser\Ghostware.NMEAParser.csproj", "{64358482-1CEB-44FE-8A3D-CACDDC479473}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ghostware.NMEAParserTestConsole", "Ghostware.NMEAParserTestConsole\Ghostware.NMEAParserTestConsole.csproj", "{D3691FB0-DAC3-425D-B0C1-AA4843F92494}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ghostware.NMEASerialTestConsole", "Ghostware.NMEASerialTestConsole\Ghostware.NMEASerialTestConsole.csproj", "{00120162-9232-4740-94AE-D3C9F5600565}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ghostware.NMEAParserTests", "Ghostware.NMEAParserTests\Ghostware.NMEAParserTests.csproj", "{55FFA46D-73AC-4B95-BB3B-99E9247AB18D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,14 @@ Global
 		{64358482-1CEB-44FE-8A3D-CACDDC479473}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64358482-1CEB-44FE-8A3D-CACDDC479473}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64358482-1CEB-44FE-8A3D-CACDDC479473}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D3691FB0-DAC3-425D-B0C1-AA4843F92494}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D3691FB0-DAC3-425D-B0C1-AA4843F92494}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D3691FB0-DAC3-425D-B0C1-AA4843F92494}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D3691FB0-DAC3-425D-B0C1-AA4843F92494}.Release|Any CPU.Build.0 = Release|Any CPU
 		{00120162-9232-4740-94AE-D3C9F5600565}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{00120162-9232-4740-94AE-D3C9F5600565}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00120162-9232-4740-94AE-D3C9F5600565}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00120162-9232-4740-94AE-D3C9F5600565}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55FFA46D-73AC-4B95-BB3B-99E9247AB18D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55FFA46D-73AC-4B95-BB3B-99E9247AB18D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55FFA46D-73AC-4B95-BB3B-99E9247AB18D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55FFA46D-73AC-4B95-BB3B-99E9247AB18D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

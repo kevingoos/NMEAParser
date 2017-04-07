@@ -42,12 +42,12 @@ namespace Ghostware.NMEAParser.NMEAMessages
         /// <summary>
         /// Speed over the ground in knots
         /// </summary>
-        public double Speed { get; set; }
+        public float Speed { get; set; }
 
         /// <summary>
         /// Track angle in degrees True
         /// </summary>
-        public double Course { get; set; }
+        public float Course { get; set; }
 
         /// <summary>
         /// Date - 23rd of March 1994
@@ -57,7 +57,12 @@ namespace Ghostware.NMEAParser.NMEAMessages
         /// <summary>
         /// Magnetic Variation
         /// </summary>
-        public double MagneticVariation { get; set; }
+        public float MagneticVariation { get; set; }
+
+        /// <summary>
+        /// Magnetic Variation Unit
+        /// </summary>
+        public string MagneticVariationUnit { get; set; }
 
         #endregion
 
@@ -70,20 +75,21 @@ namespace Ghostware.NMEAParser.NMEAMessages
                 throw new ArgumentException("Invalid GPGGA message");
             }
             FixTime = messageParts[1].ToTimeSpan();
-            IsActive = messageParts[2] == "A";
+            IsActive = messageParts[2].ToBoolean("A");
             Latitude = messageParts[3].ToCoordinates(messageParts[4], CoordinateType.Latitude);
             Longitude = messageParts[5].ToCoordinates(messageParts[6], CoordinateType.Longitude);
-            Speed = messageParts[7].ToDouble();
-            Course = messageParts[8].ToDouble();
+            Speed = messageParts[7].ToFloat();
+            Course = messageParts[8].ToFloat();
             UpdateDate = DateTime.ParseExact(messageParts[9], "ddMMyy", CultureInfo.InvariantCulture);
-            MagneticVariation = messageParts[10].ToDouble();
+            MagneticVariation = messageParts[10].ToFloat();
+            MagneticVariationUnit = messageParts[11];
         }
 
         #endregion
 
         public override string ToString()
         {
-            return $"Latitude {Latitude} - Longitude {Longitude}";
+            return $"Latitude {Latitude} - Longitude {Longitude} - Speed {Speed}";
         }
     }
 }

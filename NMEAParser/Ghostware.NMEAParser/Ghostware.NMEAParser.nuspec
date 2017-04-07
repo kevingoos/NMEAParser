@@ -2,28 +2,35 @@
 <package >
   <metadata>
     <id>Ghostware.NMEAParser</id>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <title>Ghostware.NMEAParser</title>
-    <authors>Ghosttje</authors>
+    <authors>Kevin Goos</authors>
     <owners>Ghostware</owners>
     <projectUrl>https://github.com/GhostwareDev/NMEAParser</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A library for parsing NMEA messages in C# classes.</description>
     <releaseNotes>
+		v1.0.4:
+		--------
+		- Fix for calculating latitude and longitude
+		
 		v1.0.3:
 		--------
-		- Now the parser gives null back instead of an exception when it not an nmea exception.
+		- Now the parser gives null back instead of an exception when it not an nmea exception
+		
 		v1.0.2:
 		--------
-		- Fixed parsing latitude and longitude (using degrees).
+		- Fixed parsing latitude and longitude (using degrees)
+		
 		v1.0.1:
 		--------
-		- Fixed exception namespace.
+		- Fixed exception namespace
+		
 		v1.0.0:
 		--------
-		- Initial start of the project.
+		- Initial start of the project
 	</releaseNotes>
-    <copyright>Copyright 2016</copyright>
+    <copyright>Copyright © Ghostware 2016</copyright>
 	<tags>GPSD</tags>
   </metadata>
 </package>

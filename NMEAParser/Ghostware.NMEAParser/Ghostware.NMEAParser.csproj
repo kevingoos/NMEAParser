@@ -41,11 +41,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums\CoordinateType.cs" />
+    <Compile Include="Enums\SatelliteFixType.cs" />
     <Compile Include="Enums\GpsFixQuality.cs" />
     <Compile Include="Exceptions\UnknownTypeException.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="NmeaConstants.cs" />
+    <Compile Include="NMEAMessages\GpgsaMessage.cs" />
     <Compile Include="NMEAMessages\GprmcMessage.cs" />
+    <Compile Include="NMEAMessages\GpvtgMessage.cs" />
     <Compile Include="NmeaParser.cs" />
     <Compile Include="NMEAMessages\GpggaMessage.cs" />
     <Compile Include="NMEAMessages\Base\NmeaMessage.cs" />

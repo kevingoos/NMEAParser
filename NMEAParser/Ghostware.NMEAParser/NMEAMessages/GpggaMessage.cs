@@ -54,12 +54,12 @@ namespace Ghostware.NMEAParser.NMEAMessages
         /// <summary>
         /// Horizontal dilution of position
         /// </summary>
-        public double Hdop { get; set; }
+        public float Hdop { get; set; }
 
         /// <summary>
         /// Altitude, Meters, above mean sea level
         /// </summary>
-        public double Altitude { get; set; }
+        public float Altitude { get; set; }
 
         /// <summary>
         /// Altitude units ('M' for Meters)
@@ -69,14 +69,14 @@ namespace Ghostware.NMEAParser.NMEAMessages
         /// <summary>
         /// Height of geoid (mean sea level) above WGS84
         /// </summary>
-        public double HeightOfGeoId { get; set; }
+        public float HeightOfGeoId { get; set; }
 
         public string HeightOfGeoIdUnits { get; set; }
 
         /// <summary>
         /// Time in seconds since last DGPS update
         /// </summary>
-        public TimeSpan? TimeSpanSinceDgpsUpdate { get; set; }
+        public int TimeSpanSinceDgpsUpdate { get; set; }
 
         /// <summary>
         /// DGPS station ID number
@@ -98,20 +98,20 @@ namespace Ghostware.NMEAParser.NMEAMessages
             Longitude = messageParts[4].ToCoordinates(messageParts[5], CoordinateType.Longitude);
             FixQuality = (GpsFixQuality)Enum.Parse(typeof(GpsFixQuality), messageParts[6]);
             NumberOfSatellites = messageParts[7].ToInteger();
-            Hdop = messageParts[8].ToDouble();
-            Altitude = messageParts[9].ToDouble();
+            Hdop = messageParts[8].ToFloat();
+            Altitude = messageParts[9].ToFloat();
             AltitudeUnits = messageParts[10];
-            HeightOfGeoId = messageParts[11].ToDouble();
+            HeightOfGeoId = messageParts[11].ToFloat();
             HeightOfGeoIdUnits = messageParts[12];
-            //TimeSpanSinceDgpsUpdate = !string.IsNullOrEmpty(messageParts[12]) ? TimeSpan.Parse(messageParts[12]) : TimeSpan.Zero;
-            DgpsStationId = messageParts[13].ToInteger();
+            TimeSpanSinceDgpsUpdate = messageParts[13].ToInteger();
+            DgpsStationId = messageParts[14].ToInteger();
         }
 
         #endregion
 
         public override string ToString()
         {
-            return $"Latitude {Latitude} - Longitude {Longitude}";
+            return $"Latitude {Latitude} - Longitude {Longitude} - Hoogte {Altitude}";
         }
     }
 }

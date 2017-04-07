@@ -7,10 +7,12 @@ namespace Ghostware.NMEAParser
 {
     public static class NmeaConstants
     {
-        public static Dictionary<string, Type> TypeDictionary = new Dictionary<string, Type>
+        private static readonly Dictionary<string, Type> TypeDictionary = new Dictionary<string, Type>
         {
             {"GPGGA", typeof(GpggaMessage)},
-            {"GPRMC", typeof(GprmcMessage)}
+            {"GPRMC", typeof(GprmcMessage)},
+            {"GPVTG", typeof(GpvtgMessage)},
+            {"GPGSA", typeof(GpgsaMessage)}
         };
 
         /// <summary>

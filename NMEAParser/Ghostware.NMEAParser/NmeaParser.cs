@@ -1,4 +1,5 @@
 ﻿using System;
+using Ghostware.NMEAParser.Extensions;
 using Ghostware.NMEAParser.NMEAMessages.Base;
 
 namespace Ghostware.NMEAParser
@@ -16,7 +17,8 @@ namespace Ghostware.NMEAParser
             {
                 return null;
             }
-            var messageParts = message.Split(',');
+
+            var messageParts = message.RemoveAfter("*").Split(',');
             var classType = NmeaConstants.GetClassType(messageParts[0].TrimStart('$'));
             var newInstance = (NmeaMessage)Activator.CreateInstance(classType);
             newInstance.Parse(messageParts);

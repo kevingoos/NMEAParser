@@ -2,14 +2,18 @@
 <package >
   <metadata>
     <id>Ghostware.NMEAParser</id>
-    <version>1.0.5</version>
+    <version>1.0.6</version>
     <title>Ghostware.NMEAParser</title>
-    <authors>Kevin Goos</authors>
+    <authors>Kevin Goos,Lukas Habring</authors>
     <owners>Ghostware</owners>
     <projectUrl>https://github.com/GhostwareDev/NMEAParser</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A library for parsing NMEA messages in C# classes.</description>
     <releaseNotes>
+		v1.0.6:
+		--------
+		- Ported project to .Net Standard
+		
 		v1.0.5:
 		--------
 		- Added GPGSA and GPVTG messages

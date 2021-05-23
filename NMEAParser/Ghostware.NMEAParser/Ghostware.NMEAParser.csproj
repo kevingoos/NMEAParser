@@ -38,6 +38,9 @@ v1.0.0:
     <RepositoryUrl>https://github.com/GhostwareDev/NMEAParser</RepositoryUrl>
     <Authors>Kevin Goos,Lukas Habring</Authors>
     <Product>NMEA Parser</Product>
+    <PackageTags>NMEA</PackageTags>
+    <RepositoryType>git</RepositoryType>
+    <Company>Outboxit</Company>
   </PropertyGroup>
 
 </Project>

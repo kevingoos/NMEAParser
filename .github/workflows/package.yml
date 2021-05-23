@@ -22,13 +22,13 @@ jobs:
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 3.1.200
+          dotnet-version: 3.1.101
       - name: Install dependencies
         run: dotnet restore
       - name: Build
         run: dotnet build --configuration Release --no-restore
       - name: Publish FluentEmail.Core
-        uses: brandedoutcast/publish-nuget@v2.5.2
+        uses: brandedoutcast/publish-nuget@v2.5.5
         with:
             PROJECT_FILE_PATH: Ghostware.NMEAParser/Ghostware.NMEAParser.csproj
             NUGET_KEY: ${{secrets.NUGET_API_KEY}}

@@ -1,3 +1,4 @@
+[![.NET](https://github.com/kevingoos/NMEAParser/actions/workflows/dotnet.yml/badge.svg)](https://github.com/kevingoos/NMEAParser/actions/workflows/dotnet.yml)
 # Ghostware.NMEAParser
 A library for parsing NMEA messages in C# classes.
 
